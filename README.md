@@ -26,33 +26,84 @@ This skill helps Skool community owners:
 
 ## Installation
 
-### Prerequisites
+This skill works in **three Claude environments**. Choose the method that matches how you use Claude:
 
-- [Claude Code](https://claude.com/claude-code) installed
-- Basic familiarity with Claude Code skills system
+### Method 1: Claude Web (claude.ai) - Easiest ⭐
 
-### Installation Steps
+**Best for**: Quick setup, no technical knowledge required
 
 1. **Download the skill**:
    - Go to [Releases](../../releases)
-   - Download the latest `skool-money-model-strategist-vX.X.X.zip`
+   - Download `Source code (zip)` from the latest release
 
-2. **Extract to your skills directory**:
+2. **Upload to Claude**:
+   - Go to [claude.ai](https://claude.ai)
+   - Click Settings (gear icon, bottom left) → Capabilities
+   - Ensure "Code execution and file creation" is **enabled**
+   - Scroll to Skills section
+   - Click **"Upload skill"**
+   - Select the downloaded ZIP file
+   - Claude will validate and install automatically
+
+3. **Verify installation**:
+   - Start a new chat
+   - The skill appears in your Skills list
+   - Invoke with: "Use skool-money-model-strategist skill"
+
+**Requirements**: Claude Pro, Max, Team, or Enterprise plan with code execution enabled
+
+---
+
+### Method 2: Claude Desktop - Easy
+
+**Best for**: Native app users, offline access
+
+1. **Download the skill**:
+   - Go to [Releases](../../releases)
+   - Download `Source code (zip)` from the latest release
+
+2. **Upload to Claude Desktop**:
+   - Open Claude Desktop app
+   - Go to Settings → Capabilities
+   - Ensure "Code execution and file creation" is **enabled**
+   - Scroll to Skills section
+   - Click **"Upload skill"**
+   - Drag and drop the ZIP file or click to browse
+   - Claude validates and installs automatically
+
+3. **Verify installation**:
+   - Start a new conversation
+   - Invoke with: "Use skool-money-model-strategist skill"
+
+**Requirements**: Claude Desktop app installed, Pro/Max/Team/Enterprise plan with code execution enabled
+
+---
+
+### Method 3: Claude Code (CLI) - For Developers
+
+**Best for**: Terminal users, automation workflows, developers
+
+1. **Download the skill**:
+   - Go to [Releases](../../releases)
+   - Download `Source code (zip)` from the latest release
+
+2. **Extract to skills directory**:
    ```bash
    # Windows
-   # Extract the ZIP to: C:\Users\[YourName]\.claude\skills\skool-money-model-strategist\
+   # Extract to: C:\Users\[YourName]\.claude\skills\skool-money-model-strategist\
 
    # macOS/Linux
-   # Extract the ZIP to: ~/.claude/skills/skool-money-model-strategist/
+   # Extract to: ~/.claude/skills/skool-money-model-strategist/
    ```
 
 3. **Verify installation**:
-   - Open Claude Code
-   - The skill should appear in your skills list
-   - You can invoke it by saying: "Use skool-money-model-strategist skill"
+   - Open Claude Code in terminal
+   - The skill appears in your skills list
+   - Invoke with: "Use skool-money-model-strategist skill"
 
-### Directory Structure After Installation
+**Requirements**: [Claude Code](https://claude.com/claude-code) installed
 
+**Directory structure after extraction**:
 ```
 ~/.claude/skills/skool-money-model-strategist/
 ├── SKILL.md                  # Main skill definition
@@ -70,12 +121,27 @@ This skill helps Skool community owners:
     └── math_helpers.py
 ```
 
+---
+
+### Important Notes
+
+- **Custom skills are private** - Only you can see/use skills you upload
+- **Code execution required** - Must be enabled in Settings → Capabilities
+- **One ZIP per platform** - Same ZIP file works for all three methods
+- **Trusted sources only** - Only install skills from sources you trust
+
 ## Quick Start
 
-Once installed, invoke the skill in Claude Code:
+Once installed (in any Claude environment), invoke the skill:
 
 ```
 "Use skool-money-model-strategist skill to help me design my Skool money model"
+```
+
+Or simply:
+
+```
+"Use skool-money-model-strategist skill"
 ```
 
 You'll be asked 5 essential questions:
